@@ -1,0 +1,125 @@
+<!-- ESTO ES UN COMENTARIO EN HTML. 
+ Así vamos a dejar notas para personas que trabajen en el código.
+ Esto no va a ser prcesadas por el navegador -->
+
+<!-- Esta es la forma de decirle a nuestro navegador qué tipo de archivo es -->
+<!doctype html>
+
+<html lang="es">
+  <!-- Una vez indicado el abrimos la etiqueta de HTML
+   y le cargamos del artibuto de lenguaje. En este caso, español 
+  
+  ***SINTAXIS EN HTML***
+  Los elementos HTML se escriben con los símbolos < >. La mayor parte requieren
+  una etiqueta de cierre, que se escribe con /. Ejemplo: <etiqueta></etiqueta>. 
+  Ya verán que para algunos elementos no es necesario aplicar un </cierre>, como con las etiquetas <meta>, <link>. 
+ -->
+
+  <head>
+    <!--
+      Esta es la **CABEZA** de la página.
+      Contiene la información que el navegador usa para desplegar la página. 
+      Metadatos que no vemos como usuarixs.
+    -->
+
+    <!-- Indicación del estándar de alfabeto (set de caracteres. los emojis más nuevos necesitan el estándar utf-16 pero es un poco más pesado. ya veremmos en la práctica si se necesitan) -->
+    <meta charset="utf-8" />
+
+    <!-- Aquí podríamos llamar cualquier fuente (la explicaión de cómo y desde dónde cargamos fuentes la veremos en la sesión)-->
+    <link href="https://api.fontshare.com/v2/css?f[]=panchang@1&display=swap" rel="stylesheet" />
+
+    <!-- Aquí llamamos nuestro archivo de favicon -->
+    <link rel="icon" href="https://img.icons8.com/?size=32&id=VcZFzj8mWCBo&format=png" />
+
+    <!-- Le damos un título a nuestra página. Será visible en google, por ejemplo -->
+    <title>¡Hola Mundo!</title>
+
+    <!-- Hacia abajo van algunas meta etiquetas para búsquedas del SEO y compartir social enlaces (como por ejemplo la previsualización que se genera cuando lo compoarto por Whatsapp)-->
+    <!-- dirección (URL) de la página web -->
+    <link rel="canonical" href="https://juliansintilde.github.io/pagina-TMT/" />
+    <!-- descripición del contenido de la página web -->
+    <meta name="description" content="Un sitio web para aprender. Reaprópiese y úsese como se quiera." />
+    <meta name="robots" content="index,follow" />
+    <!-- título de la página  -->
+    <meta property="og:title" content="¡Hola mundo!" />
+    <!-- descripición de la página -->
+    <meta property="og:type" content="Página para aprender lógicas de HTML" />
+    <!-- dirección de la página -->
+    <meta property="og:url" content="https://juliansintilde.github.io/pagina-TMT/" />
+    <!-- frase para la previsualización a la hora de compartir la página web como enlace -->
+    <meta property="og:description" content="Esto debe salir si compartimos el enlace." />
+    <meta
+      property="og:image"
+      content="https://i.blogs.es/3498c0/snapinsta.app_438910235_754217790111235_6354537593655075416_n_1080/1200_800.jpeg"
+    />
+
+    <!-- Le impotamos nuesto archivo CSS **el estilo de la página** -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Le impotamos nuesto archivo JS, de JavaScript **el comportamiento interactivo de la página** -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <!-- Aquí acaba la **cabeza** de nuestro documento -->
+
+  <body>
+    <!--
+      Este es el **cuerpo** de nuestra página
+      Estos elementos SÍ los ve quien navega en la página.
+      
+      Los elementos HTML se escriben con los símbolos < >. La mayor parte requieren
+      una etiqueta de cierre, que se escribe con /. Ejemplo: <etiqueta></etiqueta>. 
+      Ya verán que para algunos elementos no es necesario aplicar un </cierre>, como con las etiquetas <img>. 
+
+      Algunos elmentos cargan secciones de la página, por ejemplo imágenes, textos, embebidos, etc.
+      Los atributos de los elementos incluyen rteferencias a la hoja de estilos (el CSS)
+    -->
+
+    <!-- El elemento **bloqueSuperior** y los múltiples agrupadores o **divs** funcionan para asugnar márgenes y posición-->
+    <div class="bloqueSuperior">
+      <div class="contenido">
+        <!-- Este es el título de tu página. Es el **heading1** o el título de encabezado.
+             Solo puede haber uno en todo el documento HTML-->
+        <h1 id="titulo">¡Hola mundo!</h1>
+
+        <!-- Aquí estamos llamando una imagen desde nuestra carpeta de **imgs** usando una RUTA RELATIVA (si te paras con clic derecho en la imagen en la carpeta imgs de este repositorio te va a dar la opción de seleccionar la ruta relativa de tu imagen). La idea es que puedas cargar imágenes propias a tu sitio y reemplazarla-->
+        <!--  Esta imagen tiene una **clase** de nombre "ilustracion" (SIN TILDE), lo que la hará referenciable en la hoja de estilos -->
+        <img
+          src="imgs\olive.png"
+          class="ilustracion"
+          alt="fotograma de Little Miss Sunshine. PPP de Olive"
+          title="¡Haz clic en la imagen!"
+        />
+
+        <!-- El resto del contenido -->
+        <div class="instrucciones">
+          <h2 id="subtitulo">Usando este proyecto</h2>
+          <p>
+            Esta es un una <strong>página de bienvenida</strong> ¡Puedes usarla para construir tu propio sitio web!
+            Échale un ojo al archivo README.md para ver los pasos que puedes seguir :)
+          </p>
+
+          <!-- **¡Pon aquí el botón!** -->
+          <!-- ESTE ES UN EASTEREGG, UN PREMIO. SI VAS AL ARCHIVO pasos.md SABRÁS QUÉ HACER AQUÍ -->
+          <!-- Hay un poco del funcionamiento del botón en tu archivo de JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- **En este bloque inferior vamos a introducir nuestra primera etiqueta de iframe** -->
+    <div class="bloqueInferior">
+      <div>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1EpylMev2n0dI8?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+/******************************************************************************
+Los estilos en este ejemplo hacen algunos ajustes mínimos, de fuentes, color, márgenes y fuentes. 
+También se configura la vista y despliegue del **footer** y el botón de "Remix on Glitch" 
+******************************************************************************/
+
+/* Este es un comentario de CSS */
+
+/*
+Las reglas de estilo se refieren a elementos por tipos y atributos usando **clases** e identificadores únicos (**ID**)
+Cada sección indica un tipo de elemento o grupo de elementos, luego lista las propiedades de estilo a ser aplicadas
+*/
+
+/* Aquí definimos las propiedades CSS de ráiz o por defecto de nuestro sitio web */
+
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+
+:root {
+  --color-bg: #69f7be;
+  --altoBloque: 87vh;
+  /* vh view width */
+  --imagen-max-width: 300px;
+  --imagen-margin: 20px;
+}
+
+/******************************************************************************
+FIN de los estilos generales y por defecto
+******************************************************************************/
+
+body {
+  background-color: var(--color-bg);
+}
+
+.bloqueSuperior {
+  color: #2800ff;
+  min-height: var(--altoBloque);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.bloqueInferior {
+  min-height: var(--altoBloque);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#titulo {
+  color: #2800ff;
+  font-family: 'Asimovian', sans-serif;
+  font-weight: 666;
+  font-size: 10vw;
+  line-height: 105%;
+  margin: 0.5em 0.5em 0em 0.5em;
+  padding: 0.5em;
+}
+
+@media (max-width: 1250px) {
+}
+
+#subtitulo {
+  font-family: 'Clash Display', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1em;
+
+  h2 {
+    color: #4800ff;
+  }
+}
+
+/* Propiedades de la imagen */
+.ilustracion {
+  max-width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-height: var(--imagen-max-width);
+}
+
+/* Instructions */
+.instrucciones {
+  font-family: 'Satoshi', sans-serif;
+  margin: 1rem auto 0;
+  max-width: 50vw;
+
+  p {
+    font-size: 1.5em;
+  }
+}
+
+/* Button //Botón - Propiedades que corresponden al elemento que puedes agregar al HTML. Para eso, ¡mira el documento pasos.md! */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+/* Hundir el botón
+- Habilitar y deshabilitar esta clase (class) habilitará el movimiento hacia arriba y hacia abajo del botón
+- La propieda de transition (transición) determina la velocidad (500ms)
+*/
+.hundir {
+  transform: translateY(5px);
+}
+
+/* Interacción con la imagen */
+.ilustracion:active {
+  transform: translateY(5px);
+}
