@@ -15,7 +15,7 @@ Cada sección indica un tipo de elemento o grupo de elementos, luego lista las p
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
 
 :root {
-  --color-bg: #69f7be;
+  --color-bg: #feab3e;
   --altoBloque: 87vh;
   /* vh view width */
   --imagen-max-width: 300px;
@@ -100,7 +100,7 @@ button,
 input {
   font-family: inherit;
   font-size: 100%;
-  background: #ffffff;
+  background: #e47dda;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;

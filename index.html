@@ -29,7 +29,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=panchang@1&display=swap" rel="stylesheet" />
 
     <!-- Aquí llamamos nuestro archivo de favicon -->
-    <link rel="icon" href="https://img.icons8.com/?size=32&id=VcZFzj8mWCBo&format=png" />
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=111554&format=png&color=000000" />
 
     <!-- Le damos un título a nuestra página. Será visible en google, por ejemplo -->
     <title>¡Hola Mundo!</title>
@@ -85,9 +85,9 @@
         <!-- Aquí estamos llamando una imagen desde nuestra carpeta de **imgs** usando una RUTA RELATIVA (si te paras con clic derecho en la imagen en la carpeta imgs de este repositorio te va a dar la opción de seleccionar la ruta relativa de tu imagen). La idea es que puedas cargar imágenes propias a tu sitio y reemplazarla-->
         <!--  Esta imagen tiene una **clase** de nombre "ilustracion" (SIN TILDE), lo que la hará referenciable en la hoja de estilos -->
         <img
-          src="imgs\olive.png"
+          src="imgs/snoopy1.jpg"
           class="ilustracion"
-          alt="fotograma de Little Miss Sunshine. PPP de Olive"
+          alt="Foto de Snoopy escuchando música"
           title="¡Haz clic en la imagen!"
         />
 
@@ -95,11 +95,11 @@
         <div class="instrucciones">
           <h2 id="subtitulo">Usando este proyecto</h2>
           <p>
-            Esta es un una <strong>página de bienvenida</strong> ¡Puedes usarla para construir tu propio sitio web!
-            Échale un ojo al archivo README.md para ver los pasos que puedes seguir :)
+            Esta es la playlist de referencia <strong> de mi tesis</strong> voy a intentar agregarla como etiqueta iframe. Ojalá funcione :o
+            
           </p>
 
-          <!-- **¡Pon aquí el botón!** -->
+          <!-- **¡Pon aquí el botón!** --> <button>¡Haz clic! 💥</button>
           <!-- ESTE ES UN EASTEREGG, UN PREMIO. SI VAS AL ARCHIVO pasos.md SABRÁS QUÉ HACER AQUÍ -->
           <!-- Hay un poco del funcionamiento del botón en tu archivo de JavaScript -->
         </div>
@@ -109,16 +109,12 @@
     <!-- **En este bloque inferior vamos a introducir nuestra primera etiqueta de iframe** -->
     <div class="bloqueInferior">
       <div>
-        <iframe
-          style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1EpylMev2n0dI8?utm_source=generator"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/4gqTDUTbRzHd9ZdPg4g8cM?utm_source=generator" 
+        width="100%" height="352" frameBorder="0" allowfullscreen=""
+         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+         loading="lazy"></iframe>
+    
       </div>
     </div>
   </body>
